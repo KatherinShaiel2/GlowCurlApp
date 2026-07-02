@@ -409,3 +409,138 @@ grid-column:span 1;
 }
 
 }
+/* ========================= */
+/* RESPONSIVE PARA CELULARES */
+/* ========================= */
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    /* Menú */
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+
+        padding:20px;
+
+    }
+
+    .sidebar h2{
+
+        font-size:28px;
+
+    }
+
+    .sidebar ul{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:10px;
+
+    }
+
+    .sidebar li{
+
+        margin:0;
+
+    }
+
+    .sidebar a{
+
+        font-size:16px;
+
+        padding:10px 15px;
+
+    }
+
+    /* Contenido */
+
+    .contenido{
+
+        margin-left:0;
+
+        padding:20px;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+        text-align:center;
+
+    }
+
+    /* Formularios */
+
+    .formulario{
+
+        display:grid;
+
+        grid-template-columns:1fr;
+
+    }
+
+    .formulario textarea{
+
+        grid-column:span 1;
+
+    }
+
+    /* Botones */
+
+    .botones{
+
+        flex-direction:column;
+
+    }
+
+    .botones button{
+
+        width:100%;
+
+    }
+
+    /* Tarjetas */
+
+    .tarjetas{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .card{
+
+        width:100%;
+
+    }
+
+    /* Tabla */
+
+    .tabla-container{
+
+        overflow-x:auto;
+
+    }
+
+    table{
+
+        min-width:800px;
+
+    }
+
+}
