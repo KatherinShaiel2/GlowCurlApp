@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1">
 
@@ -16,17 +17,47 @@ href="../../css/style.css">
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<button class="menu-toggle"
+onclick="toggleMenu()">
 
-<div class="overlay" onclick="cerrarMenu()"></div>
-<div class="sidebar" id="sidebar">
+☰
 
-<h2>Glow Curl App</h2>
+</button>
+
+
+<div class="overlay"
+onclick="cerrarMenu()">
+
+</div>
+
+
+<div class="sidebar"
+id="sidebar">
+
+<h2>
+
+Glow Curl App
+
+</h2>
 
 <ul>
 
 <li><a href="dashboard.html">🏠 Inicio</a></li>
+
+<li><a href="clientes.html">👥 Clientes</a></li>
+
+<li><a href="productos.html">🧴 Productos</a></li>
+
+<li><a href="citas.html">📅 Citas</a></li>
+
+<li><a href="ventas.html">💰 Ventas</a></li>
+
+<li><a href="inventario.html">📦 Inventario</a></li>
+
+<li><a href="reportes.html">📊 Reportes</a></li>
+
 <li><a href="configuracion.html">⚙ Configuración</a></li>
+
 <li><a href="../auth/login.html">🚪 Salir</a></li>
 
 </ul>
@@ -34,70 +65,145 @@ href="../../css/style.css">
 </div>
 
 
+
 <div class="contenido">
 
-<h1>Configuración</h1>
+<h1>
+
+⚙ Configuración
+
+</h1>
+
+<p>
+
+Administra la información de Glow Curl App
+
+</p>
+
+<br>
+
+
+<h2>
+
+🏢 Información empresa
+
+</h2>
 
 <div class="formulario">
 
 <input
 type="text"
+id="empresa"
 placeholder="Nombre empresa">
+
 
 <input
 type="email"
+id="correo"
 placeholder="Correo empresa">
 
+
 <input
 type="text"
+id="telefono"
 placeholder="Teléfono">
 
+
 <input
 type="text"
+id="direccion"
 placeholder="Dirección">
 
+</div>
 
-<select>
 
-<option>
-Tema claro
+<br>
+
+
+<h2>
+
+🕒 Horario
+
+</h2>
+
+<div class="formulario">
+
+<input
+type="time"
+id="horaInicio">
+
+<input
+type="time"
+id="horaFin">
+
+</div>
+
+
+<br>
+
+
+<h2>
+
+🎨 Apariencia
+
+</h2>
+
+<div class="formulario">
+
+<select id="tema">
+
+<option value="normal">
+
+Color actual
+
 </option>
 
-<option>
-Tema oscuro
+<option value="rosa">
+
+Rosa
+
+</option>
+
+<option value="beige">
+
+Beige
+
 </option>
 
 </select>
 
-<input
-type="password"
-placeholder="Nueva contraseña">
-
-<input
-type="password"
-placeholder="Confirmar contraseña">
-
 </div>
+
+
+<br>
 
 
 <div class="botones">
 
-<button>
+<button
+onclick="guardarConfiguracion()">
 
-Guardar cambios
+💾 Guardar cambios
 
 </button>
 
-<button>
 
-Restablecer
+<button
+onclick="restablecerConfiguracion()">
+
+🗑 Restablecer
 
 </button>
 
 </div>
 
 </div>
+
+
 <script src="../../js/menu.js"></script>
+
+<script src="../../js/configuracion.js"></script>
+
 </body>
 
 </html>

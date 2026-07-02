@@ -17,13 +17,32 @@ href="../../css/style.css">
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<!-- BOTÓN MENÚ -->
 
-<div class="overlay" onclick="cerrarMenu()"></div>
-<script src="../../js/menu.js"></script>
+<button class="menu-toggle"
+onclick="toggleMenu()">
 
+☰
 
-<h2>Glow Curl App</h2>
+</button>
+
+<!-- OVERLAY -->
+
+<div class="overlay"
+onclick="cerrarMenu()">
+
+</div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar"
+id="sidebar">
+
+<h2>
+
+Glow Curl App
+
+</h2>
 
 <ul>
 
@@ -39,15 +58,31 @@ href="../../css/style.css">
 
 <li><a href="acercaCliente.html">ℹ Nosotros</a></li>
 
-<li><a href="../auth/login.html">🚪 Cerrar sesión</a></li>
+<li>
+
+<a href="#"
+onclick="cerrarSesion()">
+
+🚪 Cerrar sesión
+
+</a>
+
+</li>
 
 </ul>
 
 </div>
 
+
+<!-- CONTENIDO -->
+
 <div class="contenido">
 
-<h1>¡Bienvenido!</h1>
+<h1>
+
+¡Bienvenido!
+
+</h1>
 
 <p>
 
@@ -55,33 +90,61 @@ Nos alegra tenerte nuevamente en Glow Curl App.
 
 </p>
 
+
 <div class="tarjetas">
 
 <div class="card">
 
-<h3>Servicios</h3>
+<h3>
 
-<p>12</p>
+Servicios reservados
+
+</h3>
+
+<p id="totalServicios">
+
+0
+
+</p>
 
 </div>
+
 
 <div class="card">
 
-<h3>Productos</h3>
+<h3>
 
-<p>35</p>
+Productos comprados
+
+</h3>
+
+<p id="totalProductos">
+
+0
+
+</p>
 
 </div>
+
 
 <div class="card">
 
-<h3>Próxima cita</h3>
+<h3>
 
-<p>15 Jul</p>
+Próxima cita
+
+</h3>
+
+<p id="proximaCita">
+
+Sin citas
+
+</p>
 
 </div>
 
 </div>
+
 
 <h2 style="margin-top:40px;">
 
@@ -89,11 +152,16 @@ Recomendaciones
 
 </h2>
 
+
 <div class="tarjetas">
 
 <div class="card">
 
-<h3>Hidratación profunda</h3>
+<h3>
+
+💧 Hidratación profunda
+
+</h3>
 
 <p>
 
@@ -103,9 +171,14 @@ Ideal para cabello rizado.
 
 </div>
 
+
 <div class="card">
 
-<h3>Crema Definidora</h3>
+<h3>
+
+✨ Crema Definidora
+
+</h3>
 
 <p>
 
@@ -118,7 +191,11 @@ Producto recomendado.
 </div>
 
 </div>
+
+
 <script src="../../js/menu.js"></script>
+
+<script src="../../js/clientes.js"></script>
 </body>
 
 </html>

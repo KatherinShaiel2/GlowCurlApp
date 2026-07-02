@@ -3,124 +3,213 @@
 ===================================*/
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-body{
-    background:#f4e4da;
-    color:#333;
-    overflow-x:hidden;
+
+/*==================================
+        VARIABLES TEMAS
+===================================*/
+
+:root{
+
+--fondo:#f4e4da;
+
+--sidebar:#d89c7d;
+
+--card:white;
+
+--texto:#333;
+
+--boton:#d89c7d;
+
 }
+
+
+/*==================================
+            GENERAL
+===================================*/
+
+body{
+
+background:var(--fondo);
+
+color:var(--texto);
+
+overflow-x:hidden;
+
+transition:.4s;
+
+}
+
+body,
+.sidebar,
+.card,
+button,
+.login-box,
+table{
+
+transition:all .4s ease;
+
+}
+
 
 /*==================================
             LOGIN
 ===================================*/
 
 .login-container{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
 }
 
 .login-box{
-    width:400px;
-    background:white;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+width:400px;
+
+background:var(--card);
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+
 }
 
 .login-box h1{
-    text-align:center;
-    color:#d89c7d;
-    margin-bottom:15px;
+
+text-align:center;
+
+color:var(--sidebar);
+
+margin-bottom:15px;
+
 }
 
 .login-box p{
-    text-align:center;
-    margin-bottom:20px;
+
+text-align:center;
+
+margin-bottom:20px;
+
 }
 
 .login-box input,
 .login-box select{
-    width:100%;
-    padding:12px;
-    margin-top:12px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    font-size:15px;
+
+width:100%;
+
+padding:12px;
+
+margin-top:12px;
+
+border:1px solid #ccc;
+
+border-radius:10px;
+
+font-size:15px;
+
 }
 
 .login-box button{
-    width:100%;
-    padding:13px;
-    margin-top:15px;
-    background:#d89c7d;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
+
+width:100%;
+
+padding:13px;
+
+margin-top:15px;
+
+background:var(--boton);
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:bold;
+
 }
 
 .login-box button:hover{
-    opacity:.9;
+
+opacity:.9;
+
 }
 
 .mostrar-pass{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    margin-top:15px;
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+margin-top:15px;
+
 }
 
 .mostrar-pass input{
-    width:auto;
+
+width:auto;
+
 }
 
+
 /*==================================
-        BOTÓN MENÚ
+        MENÚ MÓVIL
 ===================================*/
 
 .menu-toggle{
 
-    display:none;
+display:none;
 
-    position:fixed;
+position:fixed;
 
-    top:15px;
+top:15px;
 
-    left:15px;
+left:15px;
 
-    width:55px;
+width:55px;
 
-    height:55px;
+height:55px;
 
-    border:none;
+border:none;
 
-    background:#d89c7d;
+background:var(--boton);
 
-    color:white;
+color:white;
 
-    font-size:30px;
+font-size:30px;
 
-    border-radius:12px;
+border-radius:12px;
 
-    cursor:pointer;
+cursor:pointer;
 
-    z-index:3000;
+z-index:3000;
 
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
+box-shadow:0 5px 15px rgba(0,0,0,.25);
 
 }
 
+
 /*==================================
-        FONDO OSCURO
+            OVERLAY
 ===================================*/
 
 .overlay{
@@ -149,6 +238,7 @@ display:block;
 
 }
 
+
 /*==================================
         MENÚ LATERAL
 ===================================*/
@@ -165,7 +255,7 @@ width:250px;
 
 height:100vh;
 
-background:#d89c7d;
+background:var(--sidebar);
 
 padding:25px;
 
@@ -219,14 +309,15 @@ transition:.3s;
 
 .sidebar a:hover{
 
-background:white;
+background:var(--card);
 
-color:#d89c7d;
+color:var(--sidebar);
 
 }
 
+
 /*==================================
-        CONTENIDO
+            CONTENIDO
 ===================================*/
 
 .contenido{
@@ -243,8 +334,9 @@ margin-bottom:10px;
 
 }
 
+
 /*==================================
-        TARJETAS
+            TARJETAS
 ===================================*/
 
 .tarjetas{
@@ -261,7 +353,7 @@ margin-top:25px;
 
 .card{
 
-background:white;
+background:var(--card);
 
 width:220px;
 
@@ -277,14 +369,15 @@ box-shadow:0 5px 15px rgba(0,0,0,.15);
 
 .card h3{
 
-color:#d89c7d;
+color:var(--sidebar);
 
 margin-bottom:10px;
 
 }
 
+
 /*==================================
-        FORMULARIOS
+            FORMULARIOS
 ===================================*/
 
 .formulario{
@@ -325,8 +418,9 @@ resize:none;
 
 }
 
+
 /*==================================
-        BOTONES
+            BOTONES
 ===================================*/
 
 .botones{
@@ -347,7 +441,7 @@ padding:12px 22px;
 
 border:none;
 
-background:#d89c7d;
+background:var(--boton);
 
 color:white;
 
@@ -365,8 +459,9 @@ opacity:.9;
 
 }
 
+
 /*==================================
-        TABLAS
+            TABLAS
 ===================================*/
 
 .tabla-container{
@@ -381,7 +476,7 @@ width:100%;
 
 border-collapse:collapse;
 
-background:white;
+background:var(--card);
 
 box-shadow:0 5px 15px rgba(0,0,0,.15);
 
@@ -393,7 +488,7 @@ overflow:hidden;
 
 th{
 
-background:#d89c7d;
+background:var(--sidebar);
 
 color:white;
 
@@ -413,12 +508,13 @@ border-bottom:1px solid #ddd;
 
 .filaSeleccionada{
 
-background:#f7d8c8;
+background:rgba(255,255,255,.4);
 
 }
 
+
 /*==================================
-        CELULARES
+            RESPONSIVE
 ===================================*/
 
 @media(max-width:768px){

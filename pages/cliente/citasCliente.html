@@ -5,6 +5,9 @@
 
 <meta charset="UTF-8">
 
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>Mis citas</title>
 
 <link rel="stylesheet"
@@ -14,29 +17,76 @@ href="../../css/style.css">
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<!-- BOTÓN MENÚ -->
 
-<div class="overlay" onclick="cerrarMenu()"></div>
-<script src="../../js/menu.js"></script>
+<button class="menu-toggle"
+onclick="toggleMenu()">
+
+☰
+
+</button>
 
 
-<h2>Glow Curl</h2>
+<!-- OVERLAY -->
+
+<div class="overlay"
+onclick="cerrarMenu()">
+
+</div>
+
+
+<!-- SIDEBAR -->
+
+<div class="sidebar"
+id="sidebar">
+
+<h2>
+
+Glow Curl
+
+</h2>
 
 <ul>
 
 <li><a href="inicioCliente.html">🏠 Inicio</a></li>
 
+<li><a href="serviciosCliente.html">💇 Servicios</a></li>
+
+<li><a href="productosCliente.html">🧴 Productos</a></li>
+
 <li><a href="citasCliente.html">📅 Mis citas</a></li>
 
-<li><a href="../auth/login.html">🚪 Salir</a></li>
+<li><a href="perfilCliente.html">👤 Mi Perfil</a></li>
+
+<li><a href="acercaCliente.html">ℹ Nosotros</a></li>
+
+<li>
+
+<a href="#"
+onclick="cerrarSesion()">
+
+🚪 Salir
+
+</a>
+
+</li>
 
 </ul>
 
 </div>
 
+
+<!-- CONTENIDO -->
+
 <div class="contenido">
 
-<h1>Mis citas</h1>
+<h1>
+
+📅 Mis citas
+
+</h1>
+
+<div class="tabla-container">
 
 <table>
 
@@ -56,17 +106,15 @@ href="../../css/style.css">
 
 </thead>
 
-<tbody>
+<tbody id="listaCitas"></tbody>
 
 <tr>
 
-<td>Definición de rizos</td>
+<td colspan="4">
 
-<td>15/07/2026</td>
+No tienes citas registradas
 
-<td>10:30 AM</td>
-
-<td>Confirmada</td>
+</td>
 
 </tr>
 
@@ -75,7 +123,13 @@ href="../../css/style.css">
 </table>
 
 </div>
+
+</div>
+
+
 <script src="../../js/menu.js"></script>
+
+<script src="../../js/clientes.js"></script>
 </body>
 
 </html>
