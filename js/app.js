@@ -1400,3 +1400,10 @@ document.getElementById(
 "correoProveedor").value="";
 
 }
+function cerrarSesionEmpresa(){
+
+    localStorage.removeItem("empresaActual");
+
+    window.location.href="../auth/loginEmpresa.html";
+
+}
