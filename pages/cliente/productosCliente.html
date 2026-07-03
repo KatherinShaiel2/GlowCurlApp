@@ -2,71 +2,36 @@
 <html lang="es">
 
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Productos</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
-
+<link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
 
-<!-- BOTÓN MENÚ -->
+<!-- MENU -->
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
-<button class="menu-toggle"
-onclick="toggleMenu()">
+<div class="overlay" onclick="cerrarMenu()"></div>
 
-☰
+<div class="sidebar" id="sidebar">
 
-</button>
-
-<!-- OVERLAY -->
-
-<div class="overlay"
-onclick="cerrarMenu()">
-
-</div>
-
-<!-- SIDEBAR -->
-
-<div class="sidebar"
-id="sidebar">
-
-<h2>
-
-Glow Curl
-
-</h2>
+<h2>Glow Curl</h2>
 
 <ul>
-
 <li><a href="inicioCliente.html">🏠 Inicio</a></li>
-
 <li><a href="serviciosCliente.html">💇 Servicios</a></li>
-
 <li><a href="productosCliente.html">🧴 Productos</a></li>
-
+<li><a href="carritoCliente.html">🛒 Carrito</a></li>
+<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
 <li><a href="citasCliente.html">📅 Mis citas</a></li>
-
 <li><a href="perfilCliente.html">👤 Mi perfil</a></li>
 
-<li><a href="acercaCliente.html">ℹ Nosotros</a></li>
-
 <li>
-
-<a href="#"
-onclick="cerrarSesion()">
-
-🚪 Salir
-
-</a>
-
+<a href="#" onclick="cerrarSesion()">🚪 Salir</a>
 </li>
 
 </ul>
@@ -74,94 +39,69 @@ onclick="cerrarSesion()">
 </div>
 
 <!-- CONTENIDO -->
-
 <div class="contenido">
 
-<h1>
-
-🧴 Productos
-
-</h1>
+<h1>🧴 Productos</h1>
 
 <div class="tarjetas">
 
+<!-- PRODUCTO 1 -->
 <div class="card">
 
-<h3>
+<img src="../../img/shampoo.png" width="150">
 
-🧴 Shampoo Curl
+<h3>Shampoo Curl</h3>
+<p>Limpieza profunda para rizos</p>
+<h2>$35.000</h2>
 
-</h3>
-
-<p>
-
-$35.000
-
-</p>
-
-<div class="botones">
-
-<button>
-
-Comprar
-
+<button onclick="agregarCarrito('Shampoo Curl',35000)">
+Agregar al carrito
 </button>
 
 </div>
 
-</div>
-
-
+<!-- PRODUCTO 2 -->
 <div class="card">
 
-<h3>
+<img src="../../img/crema.png" width="150">
 
-✨ Crema Definidora
+<h3>Crema Definidora</h3>
+<p>Control del frizz</p>
+<h2>$42.000</h2>
 
-</h3>
-
-<p>
-
-$42.000
-
-</p>
-
-<div class="botones">
-
-<button>
-
-Comprar
-
+<button onclick="agregarCarrito('Crema Definidora',42000)">
+Agregar al carrito
 </button>
 
 </div>
 
-</div>
-
-
+<!-- PRODUCTO 3 -->
 <div class="card">
 
-<h3>
+<img src="../../img/aceite.png" width="150">
 
-🌿 Aceite Natural
+<h3>Aceite Natural</h3>
+<p>Brillo y nutrición</p>
+<h2>$30.000</h2>
 
-</h3>
-
-<p>
-
-$30.000
-
-</p>
-
-<div class="botones">
-
-<button>
-
-Comprar
-
+<button onclick="agregarCarrito('Aceite Natural',30000)">
+Agregar al carrito
 </button>
 
 </div>
+
+<!-- PRODUCTO 4 -->
+<div class="card">
+
+<img src="../../img/mascarilla.png" width="150">
+
+<h3>Mascarilla Hidratante</h3>
+<p>Hidratación profunda</p>
+<h2>$48.000</h2>
+
+<button onclick="agregarCarrito('Mascarilla Hidratante',48000)">
+Agregar al carrito
+</button>
 
 </div>
 
@@ -170,8 +110,8 @@ Comprar
 </div>
 
 <script src="../../js/menu.js"></script>
-
 <script src="../../js/clientes.js"></script>
+
 </body>
 
 </html>

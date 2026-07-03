@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Login Cliente</title>
+
+<link rel="stylesheet"
+href="../../css/style.css">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+<div class="login-box">
+
+<h1>
+
+Glow Curl Cliente
+
+</h1>
+
+<p>
+
+Inicia sesión
+
+</p>
+
+<input
+type="email"
+id="usuarioCliente"
+placeholder="Correo">
+
+<input
+type="password"
+id="passwordCliente"
+placeholder="Contraseña">
+
+<div class="mostrar-pass">
+
+<input
+type="checkbox"
+onclick="mostrarPasswordCliente()">
+
+<label>
+
+Mostrar contraseña
+
+</label>
+
+</div>
+
+<button
+onclick="ingresarCliente()">
+
+Iniciar sesión
+
+</button>
+
+<button
+onclick="limpiarCliente()">
+
+Limpiar
+
+</button>
+
+<br><br>
+
+<p>
+
+¿No tienes cuenta?
+
+<a href="registroCliente.html">
+
+Registrarse
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<script src="../../js/clientes.js"></script>
+
+</body>
+
+</html>

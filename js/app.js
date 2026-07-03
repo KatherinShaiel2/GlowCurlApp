@@ -1,49 +1,59 @@
-function ingresar(){
+/* LOGIN CLIENTE */
+
+function ingresarCliente(){
 
 let usuario=
-document.getElementById("usuario").value;
+document.getElementById(
+"usuarioCliente"
+).value;
 
 let password=
-document.getElementById("password").value;
-
-let rol=
-document.getElementById("rol").value;
-
+document.getElementById(
+"passwordCliente"
+).value;
 
 if(
 usuario===""||
-password===""||
-rol===""
+password===""
 ){
 
-alert("Complete todos los campos");
+alert(
+"Complete todos los campos"
+);
+
 return;
 
 }
 
-if(rol==="cliente"){
+localStorage.setItem(
+"usuarioActual",
+usuario
+);
 
 window.location.href=
-"/pages/cliente/inicioCliente.html";
-
-}
-
-else{
-
-window.location.href=
-"/pages/empresa/dashboard.html";
-
-}
+"../cliente/inicioCliente.html";
 
 }
 
 
+function limpiarCliente(){
 
-function mostrarPassword(){
+document.getElementById(
+"usuarioCliente"
+).value="";
+
+document.getElementById(
+"passwordCliente"
+).value="";
+
+}
+
+
+function mostrarPasswordCliente(){
 
 let pass=
 document.getElementById(
-"password"
+"passwordCliente"
 );
 
 if(pass.type==="password"){
@@ -59,6 +69,76 @@ pass.type="password";
 }
 
 
+
+/* LOGIN EMPRESA */
+
+function ingresarEmpresa(){
+
+let usuario=
+document.getElementById(
+"usuarioEmpresa"
+).value;
+
+let password=
+document.getElementById(
+"passwordEmpresa"
+).value;
+
+if(
+usuario===""||
+password===""
+){
+
+alert(
+"Complete todos los campos"
+);
+
+return;
+
+}
+
+localStorage.setItem(
+"empresaActual",
+usuario
+);
+
+window.location.href=
+"../empresa/dashboard.html";
+
+}
+
+
+function limpiarEmpresa(){
+
+document.getElementById(
+"usuarioEmpresa"
+).value="";
+
+document.getElementById(
+"passwordEmpresa"
+).value="";
+
+}
+
+
+function mostrarPasswordEmpresa(){
+
+let pass=
+document.getElementById(
+"passwordEmpresa"
+);
+
+if(pass.type==="password"){
+
+pass.type="text";
+
+}else{
+
+pass.type="password";
+
+}
+
+}
 
 function limpiarLogin(){
 

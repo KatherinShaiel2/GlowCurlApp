@@ -4,14 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inicio Cliente</title>
+<title>Historial de Citas</title>
 
 <link rel="stylesheet" href="../../css/style.css">
 </head>
 
 <body>
 
+<!-- BOTÓN MENÚ -->
 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 <div class="overlay" onclick="cerrarMenu()"></div>
 
 <div class="sidebar" id="sidebar">
@@ -24,43 +26,40 @@
 <li><a href="productosCliente.html">🧴 Productos</a></li>
 <li><a href="citasCliente.html">📅 Mis citas</a></li>
 <li><a href="historialCliente.html">📜 Historial</a></li>
-<li><a href="carritoCliente.html">🛒 Carrito</a></li>
-<li><a href="comprasCliente.html">🛍 Compras</a></li>
-<li><a href="perfilCliente.html">👤 Perfil</a></li>
+<li><a href="perfilCliente.html">👤 Mi perfil</a></li>
 
-<li><a href="#" onclick="cerrarSesion()">🚪 Salir</a></li>
+<li>
+<a href="#" onclick="cerrarSesion()">🚪 Salir</a>
+</li>
 </ul>
 
 </div>
 
 <div class="contenido">
 
-<h1>Bienvenido</h1>
+<h1>📜 Historial de citas</h1>
 
-<p>Panel del cliente Glow Curl</p>
+<div class="tabla-container">
 
-<div class="tarjetas">
+<table>
 
-<div class="card">
-<h3>Servicios</h3>
-<p id="totalServicios">0</p>
-</div>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Fecha</th>
+<th>Hora</th>
+<th>Estado</th>
+</tr>
+</thead>
 
-<div class="card">
-<h3>Productos</h3>
-<p id="totalProductos">0</p>
-</div>
+<tbody id="listaHistorial"></tbody>
 
-<div class="card">
-<h3>Próxima cita</h3>
-<p id="proximaCita">Sin citas</p>
-</div>
+</table>
 
 </div>
 
 </div>
 
-<script src="../../js/menu.js"></script>
 <script src="../../js/clientes.js"></script>
 
 </body>

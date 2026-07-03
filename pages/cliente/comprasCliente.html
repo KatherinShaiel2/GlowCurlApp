@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Mis citas</title>
+<title>Mis Compras</title>
 
 <link rel="stylesheet"
 href="../../css/style.css">
@@ -26,12 +26,14 @@ onclick="toggleMenu()">
 
 </button>
 
+
 <!-- OVERLAY -->
 
 <div class="overlay"
 onclick="cerrarMenu()">
 
 </div>
+
 
 <!-- SIDEBAR -->
 
@@ -46,19 +48,54 @@ Glow Curl
 
 <ul>
 
-<li><a href="inicioCliente.html">🏠 Inicio</a></li>
+<li>
+<a href="inicioCliente.html">
+🏠 Inicio
+</a>
+</li>
 
-<li><a href="serviciosCliente.html">💇 Servicios</a></li>
+<li>
+<a href="serviciosCliente.html">
+💇 Servicios
+</a>
+</li>
 
-<li><a href="productosCliente.html">🧴 Productos</a></li>
+<li>
+<a href="productosCliente.html">
+🧴 Productos
+</a>
+</li>
 
-<li><a href="citasCliente.html">📅 Mis citas</a></li>
+<li>
+<a href="carritoCliente.html">
+🛒 Carrito
+</a>
+</li>
 
-<li><a href="perfilCliente.html">👤 Mi Perfil</a></li>
+<li>
+<a href="comprasCliente.html">
+🛍 Mis compras
+</a>
+</li>
 
-<li><a href="acercaCliente.html">ℹ Nosotros</a></li>
-<li><a href="carritoCliente.html">🛒 Carrito</a></li>
-<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
+<li>
+<a href="citasCliente.html">
+📅 Mis citas
+</a>
+</li>
+
+<li>
+<a href="perfilCliente.html">
+👤 Mi perfil
+</a>
+</li>
+
+<li>
+<a href="acercaCliente.html">
+ℹ Nosotros
+</a>
+</li>
+
 <li>
 
 <a href="#"
@@ -81,7 +118,7 @@ onclick="cerrarSesion()">
 
 <h1>
 
-📅 Mis citas
+🛍 Mis compras
 
 </h1>
 
@@ -93,19 +130,15 @@ onclick="cerrarSesion()">
 
 <tr>
 
-<th>Servicio</th>
-
+<th>Producto</th>
+<th>Precio</th>
 <th>Fecha</th>
-
-<th>Hora</th>
-
-<th>Estado</th>
 
 </tr>
 
 </thead>
 
-<tbody id="listaCitas">
+<tbody id="listaCompras">
 
 </tbody>
 
@@ -115,9 +148,16 @@ onclick="cerrarSesion()">
 
 </div>
 
+
 <script src="../../js/menu.js"></script>
 
 <script src="../../js/clientes.js"></script>
+
+<script>
+
+mostrarCompras();
+
+</script>
 
 </body>
 

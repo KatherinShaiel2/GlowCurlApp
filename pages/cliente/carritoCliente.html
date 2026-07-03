@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inicio Cliente</title>
+
+<title>Carrito</title>
 
 <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -22,12 +23,10 @@
 <li><a href="inicioCliente.html">🏠 Inicio</a></li>
 <li><a href="serviciosCliente.html">💇 Servicios</a></li>
 <li><a href="productosCliente.html">🧴 Productos</a></li>
-<li><a href="citasCliente.html">📅 Mis citas</a></li>
-<li><a href="historialCliente.html">📜 Historial</a></li>
 <li><a href="carritoCliente.html">🛒 Carrito</a></li>
-<li><a href="comprasCliente.html">🛍 Compras</a></li>
-<li><a href="perfilCliente.html">👤 Perfil</a></li>
-
+<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
+<li><a href="citasCliente.html">📅 Mis citas</a></li>
+<li><a href="perfilCliente.html">👤 Mi perfil</a></li>
 <li><a href="#" onclick="cerrarSesion()">🚪 Salir</a></li>
 </ul>
 
@@ -35,33 +34,36 @@
 
 <div class="contenido">
 
-<h1>Bienvenido</h1>
+<h1>🛒 Mi carrito</h1>
 
-<p>Panel del cliente Glow Curl</p>
+<table border="1" width="100%">
 
-<div class="tarjetas">
+<thead>
+<tr>
+<th>Producto</th>
+<th>Precio</th>
+<th>Acción</th>
+</tr>
+</thead>
 
-<div class="card">
-<h3>Servicios</h3>
-<p id="totalServicios">0</p>
-</div>
+<tbody id="listaCarrito"></tbody>
 
-<div class="card">
-<h3>Productos</h3>
-<p id="totalProductos">0</p>
-</div>
+</table>
 
-<div class="card">
-<h3>Próxima cita</h3>
-<p id="proximaCita">Sin citas</p>
-</div>
+<h2>Total: $<span id="totalCarrito">0</span></h2>
 
-</div>
+<br>
+
+<button onclick="finalizarCompra()">💳 Finalizar compra</button>
 
 </div>
 
 <script src="../../js/menu.js"></script>
 <script src="../../js/clientes.js"></script>
+
+<script>
+mostrarCarrito();
+</script>
 
 </body>
 </html>

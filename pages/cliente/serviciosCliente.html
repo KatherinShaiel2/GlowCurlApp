@@ -3,88 +3,154 @@
 
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Servicios</title>
 
-<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet"
+href="../../css/style.css">
+
 </head>
 
 <body>
 
-<!-- BOTÓN MENÚ -->
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<button class="menu-toggle"
+onclick="toggleMenu()">
+☰
+</button>
 
-<!-- OVERLAY -->
-<div class="overlay" onclick="cerrarMenu()"></div>
+<div class="overlay"
+onclick="cerrarMenu()">
+</div>
 
-<!-- SIDEBAR -->
-<div class="sidebar" id="sidebar">
+<div class="sidebar"
+id="sidebar">
 
 <h2>Glow Curl</h2>
 
 <ul>
-<li><a href="inicioCliente.html">🏠 Inicio</a></li>
-<li><a href="serviciosCliente.html">💇 Servicios</a></li>
-<li><a href="productosCliente.html">🧴 Productos</a></li>
-<li><a href="citasCliente.html">📅 Mis citas</a></li>
-<li><a href="perfilCliente.html">👤 Mi perfil</a></li>
-<li><a href="acercaCliente.html">ℹ Nosotros</a></li>
 
+<li><a href="inicioCliente.html">🏠 Inicio</a></li>
+
+<li><a href="serviciosCliente.html">💇 Servicios</a></li>
+
+<li><a href="productosCliente.html">🧴 Productos</a></li>
+
+<li><a href="citasCliente.html">📅 Mis citas</a></li>
+
+<li><a href="perfilCliente.html">👤 Mi perfil</a></li>
+
+<li><a href="acercaCliente.html">ℹ Nosotros</a></li>
+<li><a href="carritoCliente.html">🛒 Carrito</a></li>
+<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
 <li>
-<a href="#" onclick="cerrarSesion()">🚪 Salir</a>
+<a href="#"
+onclick="cerrarSesion()">
+🚪 Salir
+</a>
 </li>
 
 </ul>
 
 </div>
 
-<!-- CONTENIDO -->
 <div class="contenido">
 
 <h1>💇 Servicios</h1>
 
 <div class="tarjetas">
 
-<!-- SERVICIO 1 -->
 <div class="card">
+
 <h3>💇 Definición de rizos</h3>
+
 <p>45 minutos</p>
+
 <h2>$60.000</h2>
 
+<input
+type="date"
+id="fecha1">
+
+<input
+type="time"
+id="hora1">
+
 <div class="botones">
-<button onclick="reservar('Definición de rizos')">
+
+<button
+onclick="reservar(
+'Definición de rizos',
+'fecha1',
+'hora1'
+)">
 Reservar
 </button>
-</div>
 
 </div>
 
-<!-- SERVICIO 2 -->
+</div>
+
+
 <div class="card">
+
 <h3>✨ Hidratación</h3>
+
 <p>60 minutos</p>
+
 <h2>$80.000</h2>
 
+<input
+type="date"
+id="fecha2">
+
+<input
+type="time"
+id="hora2">
+
 <div class="botones">
-<button onclick="reservar('Hidratación')">
+
+<button
+onclick="reservar(
+'Hidratación',
+'fecha2',
+'hora2'
+)">
 Reservar
 </button>
-</div>
 
 </div>
 
-<!-- SERVICIO 3 -->
+</div>
+
+
 <div class="card">
+
 <h3>🌸 Tratamiento Capilar</h3>
+
 <p>90 minutos</p>
+
 <h2>$120.000</h2>
 
+<input
+type="date"
+id="fecha3">
+
+<input
+type="time"
+id="hora3">
+
 <div class="botones">
-<button onclick="reservar('Tratamiento Capilar')">
+
+<button
+onclick="reservar(
+'Tratamiento Capilar',
+'fecha3',
+'hora3'
+)">
 Reservar
 </button>
-</div>
 
 </div>
 
@@ -92,8 +158,10 @@ Reservar
 
 </div>
 
-<!-- JS (IMPORTANTE ORDEN) -->
+</div>
+
 <script src="../../js/menu.js"></script>
+
 <script src="../../js/clientes.js"></script>
 
 </body>
