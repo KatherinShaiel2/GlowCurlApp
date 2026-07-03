@@ -2,58 +2,279 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Inicio Cliente</title>
 
 <link rel="stylesheet" href="../../css/style.css">
+
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<!-- BOTÓN MENÚ -->
+
+<button class="menu-toggle" onclick="toggleMenu()">
+
+☰
+
+</button>
+
+<!-- OVERLAY -->
+
 <div class="overlay" onclick="cerrarMenu()"></div>
+
+<!-- SIDEBAR -->
 
 <div class="sidebar" id="sidebar">
 
 <h2>Glow Curl</h2>
 
 <ul>
-<li><a href="inicioCliente.html">🏠 Inicio</a></li>
-<li><a href="serviciosCliente.html">💇 Servicios</a></li>
-<li><a href="productosCliente.html">🧴 Productos</a></li>
-<li><a href="citasCliente.html">📅 Mis citas</a></li>
-<li><a href="historialCliente.html">📜 Historial</a></li>
-<li><a href="carritoCliente.html">🛒 Carrito</a></li>
-<li><a href="comprasCliente.html">🛍 Compras</a></li>
-<li><a href="perfilCliente.html">👤 Perfil</a></li>
 
-<li><a href="#" onclick="cerrarSesion()">🚪 Salir</a></li>
+<li><a href="inicioCliente.html">🏠 Inicio</a></li>
+
+<li><a href="serviciosCliente.html">💇 Servicios</a></li>
+
+<li><a href="productosCliente.html">🧴 Productos</a></li>
+
+<li><a href="carritoCliente.html">🛒 Carrito</a></li>
+
+<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
+
+<li><a href="citasCliente.html">📅 Mis citas</a></li>
+
+<li><a href="historialCliente.html">📜 Historial</a></li>
+
+<li><a href="perfilCliente.html">👤 Mi perfil</a></li>
+
+<li><a href="acercaCliente.html">ℹ Nosotros</a></li>
+
+<li>
+
+<a href="#" onclick="cerrarSesion()">
+
+🚪 Cerrar sesión
+
+</a>
+
+</li>
+
 </ul>
 
 </div>
 
+<!-- CONTENIDO -->
+
 <div class="contenido">
 
-<h1>Bienvenido</h1>
+<h1>
 
-<p>Panel del cliente Glow Curl</p>
+¡Bienvenido a Glow Curl!
+
+</h1>
+
+<p>
+
+Gestiona tus servicios, productos y citas desde un solo lugar.
+
+</p>
+
+<!-- TARJETAS -->
 
 <div class="tarjetas">
 
 <div class="card">
-<h3>Servicios</h3>
-<p id="totalServicios">0</p>
+
+<h3>
+
+💇 Servicios reservados
+
+</h3>
+
+<p id="totalServicios">
+
+0
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Productos</h3>
-<p id="totalProductos">0</p>
+
+<h3>
+
+🧴 Productos comprados
+
+</h3>
+
+<p id="totalProductos">
+
+0
+
+</p>
+
 </div>
 
 <div class="card">
-<h3>Próxima cita</h3>
-<p id="proximaCita">Sin citas</p>
+
+<h3>
+
+📅 Próxima cita
+
+</h3>
+
+<p id="proximaCita">
+
+Sin citas
+
+</p>
+
+</div>
+
+</div>
+
+<br>
+
+<!-- ACCESOS RÁPIDOS -->
+
+<h2>
+
+Accesos rápidos
+
+</h2>
+
+<div class="tarjetas">
+
+<div class="card">
+
+<h3>
+
+💇 Reservar servicio
+
+</h3>
+
+<p>
+
+Agenda una nueva cita para cualquiera de nuestros servicios.
+
+</p>
+
+<button onclick="window.location.href='serviciosCliente.html'">
+
+Ir
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🧴 Comprar productos
+
+</h3>
+
+<p>
+
+Explora nuestro catálogo para el cuidado de tu cabello.
+
+</p>
+
+<button onclick="window.location.href='productosCliente.html'">
+
+Ir
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+👤 Actualizar perfil
+
+</h3>
+
+<p>
+
+Mantén tu información siempre actualizada.
+
+</p>
+
+<button onclick="window.location.href='perfilCliente.html'">
+
+Ir
+
+</button>
+
+</div>
+
+</div>
+
+<br>
+
+<!-- RECOMENDACIONES -->
+
+<h2>
+
+Recomendaciones para ti
+
+</h2>
+
+<div class="tarjetas">
+
+<div class="card">
+
+<h3>
+
+💧 Hidratación profunda
+
+</h3>
+
+<p>
+
+Ideal para cabellos secos y con rizos.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+✨ Crema Definidora
+
+</h3>
+
+<p>
+
+Ayuda a definir los rizos durante todo el día.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+
+🌿 Aceite Natural
+
+</h3>
+
+<p>
+
+Nutre y aporta brillo al cabello.
+
+</p>
+
 </div>
 
 </div>
@@ -61,7 +282,19 @@
 </div>
 
 <script src="../../js/menu.js"></script>
+
 <script src="../../js/clientes.js"></script>
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+cargarInicio();
+
+});
+
+</script>
+
 </body>
+
 </html>

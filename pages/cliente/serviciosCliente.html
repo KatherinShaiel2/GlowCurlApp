@@ -2,30 +2,34 @@
 <html lang="es">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Servicios</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
 
-<button class="menu-toggle"
-onclick="toggleMenu()">
+<!-- BOTÓN MENÚ -->
+
+<button class="menu-toggle" onclick="toggleMenu()">
+
 ☰
+
 </button>
 
-<div class="overlay"
-onclick="cerrarMenu()">
-</div>
+<!-- OVERLAY -->
 
-<div class="sidebar"
-id="sidebar">
+<div class="overlay" onclick="cerrarMenu()"></div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
 
 <h2>Glow Curl</h2>
 
@@ -37,122 +41,263 @@ id="sidebar">
 
 <li><a href="productosCliente.html">🧴 Productos</a></li>
 
+<li><a href="carritoCliente.html">🛒 Carrito</a></li>
+
+<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
+
 <li><a href="citasCliente.html">📅 Mis citas</a></li>
+
+<li><a href="historialCliente.html">📜 Historial</a></li>
 
 <li><a href="perfilCliente.html">👤 Mi perfil</a></li>
 
 <li><a href="acercaCliente.html">ℹ Nosotros</a></li>
-<li><a href="carritoCliente.html">🛒 Carrito</a></li>
-<li><a href="comprasCliente.html">🛍 Mis compras</a></li>
+
 <li>
-<a href="#"
-onclick="cerrarSesion()">
+
+<a href="#" onclick="cerrarSesion()">
+
 🚪 Salir
+
 </a>
+
 </li>
 
 </ul>
 
 </div>
 
+<!-- CONTENIDO -->
+
 <div class="contenido">
 
-<h1>💇 Servicios</h1>
+<h1>
+
+💇 Nuestros Servicios
+
+</h1>
+
+<p>
+
+Selecciona el servicio que deseas reservar.
+
+</p>
 
 <div class="tarjetas">
 
+<!-- Servicio 1 -->
+
 <div class="card">
 
-<h3>💇 Definición de rizos</h3>
+<h3>✂ Corte para Rizos</h3>
 
-<p>45 minutos</p>
+<p>Corte especializado para cabello rizado.</p>
+
+<h2>$40.000</h2>
+
+<input type="date" id="fecha1">
+
+<select id="hora1">
+
+<option value="">Hora</option>
+
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+
+</select>
+
+<br><br>
+
+<button onclick="reservar('Corte para Rizos','fecha1','hora1')">
+
+Reservar
+
+</button>
+
+</div>
+
+<!-- Servicio 2 -->
+
+<div class="card">
+
+<h3>💧 Hidratación</h3>
+
+<p>Tratamiento profundo para rizos.</p>
+
+<h2>$55.000</h2>
+
+<input type="date" id="fecha2">
+
+<select id="hora2">
+
+<option value="">Hora</option>
+
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+
+</select>
+
+<br><br>
+
+<button onclick="reservar('Hidratación','fecha2','hora2')">
+
+Reservar
+
+</button>
+
+</div>
+
+<!-- Servicio 3 -->
+
+<div class="card">
+
+<h3>✨ Definición de Rizos</h3>
+
+<p>Peinado profesional para rizos definidos.</p>
+
+<h2>$45.000</h2>
+
+<input type="date" id="fecha3">
+
+<select id="hora3">
+
+<option value="">Hora</option>
+
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+
+</select>
+
+<br><br>
+
+<button onclick="reservar('Definición de Rizos','fecha3','hora3')">
+
+Reservar
+
+</button>
+
+</div>
+
+<!-- Servicio 4 -->
+
+<div class="card">
+
+<h3>🌿 Nutrición Capilar</h3>
+
+<p>Tratamiento nutritivo para el cabello.</p>
 
 <h2>$60.000</h2>
 
-<input
-type="date"
-id="fecha1">
+<input type="date" id="fecha4">
 
-<input
-type="time"
-id="hora1">
+<select id="hora4">
 
-<div class="botones">
+<option value="">Hora</option>
 
-<button
-onclick="reservar(
-'Definición de rizos',
-'fecha1',
-'hora1'
-)">
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+
+</select>
+
+<br><br>
+
+<button onclick="reservar('Nutrición Capilar','fecha4','hora4')">
+
 Reservar
+
 </button>
 
 </div>
 
-</div>
-
-
-<div class="card">
-
-<h3>✨ Hidratación</h3>
-
-<p>60 minutos</p>
-
-<h2>$80.000</h2>
-
-<input
-type="date"
-id="fecha2">
-
-<input
-type="time"
-id="hora2">
-
-<div class="botones">
-
-<button
-onclick="reservar(
-'Hidratación',
-'fecha2',
-'hora2'
-)">
-Reservar
-</button>
-
-</div>
-
-</div>
-
+<!-- Servicio 5 -->
 
 <div class="card">
 
-<h3>🌸 Tratamiento Capilar</h3>
+<h3>🎨 Coloración</h3>
 
-<p>90 minutos</p>
+<p>Cambio de color profesional.</p>
 
 <h2>$120.000</h2>
 
-<input
-type="date"
-id="fecha3">
+<input type="date" id="fecha5">
 
-<input
-type="time"
-id="hora3">
+<select id="hora5">
 
-<div class="botones">
+<option value="">Hora</option>
 
-<button
-onclick="reservar(
-'Tratamiento Capilar',
-'fecha3',
-'hora3'
-)">
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+
+</select>
+
+<br><br>
+
+<button onclick="reservar('Coloración','fecha5','hora5')">
+
 Reservar
+
 </button>
 
 </div>
+
+<!-- Servicio 6 -->
+
+<div class="card">
+
+<h3>👰 Peinado Especial</h3>
+
+<p>Ideal para eventos y ocasiones especiales.</p>
+
+<h2>$90.000</h2>
+
+<input type="date" id="fecha6">
+
+<select id="hora6">
+
+<option value="">Hora</option>
+
+<option>08:00 AM</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+
+</select>
+
+<br><br>
+
+<button onclick="reservar('Peinado Especial','fecha6','hora6')">
+
+Reservar
+
+</button>
 
 </div>
 
@@ -165,4 +310,5 @@ Reservar
 <script src="../../js/clientes.js"></script>
 
 </body>
+
 </html>
