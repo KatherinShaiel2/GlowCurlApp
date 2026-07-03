@@ -4,35 +4,43 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Usuarios</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
- <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
 <div class="overlay" onclick="cerrarMenu()"></div>
-<script src="../../js/menu.js"></script>
 
+<div class="sidebar" id="sidebar">
 
-<h2>Glow Curl App</h2>
+<h2 id="nombreEmpresa">Glow Curl App</h2>
 
 <ul>
 
 <li><a href="dashboard.html">🏠 Inicio</a></li>
+<li><a href="clientes.html">👥 Clientes</a></li>
+<li><a href="empleados.html">👨‍💼 Empleados</a></li>
+<li><a href="productos.html">🧴 Productos</a></li>
+<li><a href="servicios.html">💇 Servicios</a></li>
+<li><a href="citas.html">📅 Citas</a></li>
+<li><a href="reportes.html">💰 Ventas</a></li>
+<li><a href="inventario.html">📦 Inventario</a></li>
+<li><a href="proveedores.html">🚚 Proveedores</a></li>
 <li><a href="usuarios.html">👤 Usuarios</a></li>
-<li><a href="../auth/login.html">🚪 Salir</a></li>
+<li><a href="reportes.html">📊 Reportes</a></li>
+<li><a href="configuracion.html">⚙ Configuración</a></li>
+<li><a href="../auth/loginEmpresa.html">🚪 Salir</a></li>
 
 </ul>
 
 </div>
-
 
 <div class="contenido">
 
@@ -57,49 +65,32 @@ placeholder="Usuario">
 
 <select id="rolUsuario">
 
-<option value="">
-Seleccione rol
-</option>
+<option value="">Seleccione rol</option>
 
 <option>Administrador</option>
-
 <option>Empleado</option>
-
 <option>Cliente</option>
 
 </select>
 
 <select id="estadoUsuario">
 
-<option value="">
-Estado
-</option>
+<option value="">Estado</option>
 
 <option>Activo</option>
-
 <option>Inactivo</option>
 
 </select>
 
 </div>
 
-
 <div class="botones">
 
-<button>
-Guardar
-</button>
-
-<button>
-Editar
-</button>
-
-<button>
-Eliminar
-</button>
+<button>Guardar</button>
+<button>Editar</button>
+<button>Eliminar</button>
 
 </div>
-
 
 <div class="tabla-container">
 
@@ -138,7 +129,8 @@ Eliminar
 </div>
 
 </div>
-<script src="../../js/menu.js"></script>
-</body>
 
+<script src="../../js/menu.js"></script>
+
+</body>
 </html>

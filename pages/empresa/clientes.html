@@ -4,21 +4,25 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Clientes</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<!-- BOTÓN MENÚ -->
+<button class="menu-toggle" onclick="toggleMenu()">
+☰
+</button>
 
+<!-- OVERLAY -->
 <div class="overlay" onclick="cerrarMenu()"></div>
+
+<!-- MENÚ -->
 <div class="sidebar" id="sidebar">
 
 <h2>Glow Curl App</h2>
@@ -37,7 +41,7 @@ href="../../css/style.css">
 
 <li><a href="citas.html">📅 Citas</a></li>
 
-<li><a href="ventas.html">💰 Ventas</a></li>
+<li><a href="reportes.html">💰 Ventas</a></li>
 
 <li><a href="inventario.html">📦 Inventario</a></li>
 
@@ -49,12 +53,17 @@ href="../../css/style.css">
 
 <li><a href="configuracion.html">⚙ Configuración</a></li>
 
-<li><a href="../auth/login.html">🚪 Salir</a></li>
+<li>
+<a href="../auth/loginEmpresa.html">
+🚪 Salir
+</a>
+</li>
 
 </ul>
 
 </div>
 
+<!-- CONTENIDO -->
 <div class="contenido">
 
 <h1>Clientes</h1>
@@ -109,7 +118,6 @@ placeholder="Observaciones">
 
 </div>
 
-
 <div class="botones">
 
 <button onclick="guardar()">
@@ -129,7 +137,6 @@ Limpiar
 </button>
 
 </div>
-
 
 <div class="tabla-container">
 
@@ -161,5 +168,7 @@ Limpiar
 
 <script src="../../js/app.js"></script>
 <script src="../../js/menu.js"></script>
+
 </body>
+
 </html>

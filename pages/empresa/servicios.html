@@ -4,26 +4,28 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Servicios</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
-    <button class="menu-toggle" onclick="toggleMenu()">
+
+<!-- BOTÓN MENÚ -->
+<button class="menu-toggle" onclick="toggleMenu()">
 ☰
 </button>
 
+<!-- OVERLAY -->
 <div class="overlay" onclick="cerrarMenu()"></div>
 
-<div class="sidebar">
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
 
-<h2>Glow Curl App</h2>
+<h2 id="nombreEmpresa">Glow Curl App</h2>
 
 <ul>
 
@@ -39,7 +41,7 @@ href="../../css/style.css">
 
 <li><a href="citas.html">📅 Citas</a></li>
 
-<li><a href="ventas.html">💰 Ventas</a></li>
+<li><a href="reportes.html">💰 Ventas</a></li>
 
 <li><a href="inventario.html">📦 Inventario</a></li>
 
@@ -51,13 +53,13 @@ href="../../css/style.css">
 
 <li><a href="configuracion.html">⚙ Configuración</a></li>
 
-<li><a href="../auth/login.html">🚪 Salir</a></li>
+<li><a href="../auth/loginEmpresa.html">🚪 Salir</a></li>
 
 </ul>
 
 </div>
 
-
+<!-- CONTENIDO -->
 <div class="contenido">
 
 <h1>Servicios</h1>
@@ -73,7 +75,7 @@ oninput="soloNumeros(this)">
 <input
 type="text"
 id="nombreServicio"
-placeholder="Nombre servicio">
+placeholder="Nombre del servicio">
 
 <input
 type="text"
@@ -107,7 +109,6 @@ placeholder="Descripción">
 
 </div>
 
-
 <div class="botones">
 
 <button onclick="guardarServicio()">
@@ -127,7 +128,6 @@ Limpiar
 </button>
 
 </div>
-
 
 <div class="tabla-container">
 
@@ -159,6 +159,7 @@ Limpiar
 
 <script src="../../js/app.js"></script>
 <script src="../../js/menu.js"></script>
+
 </body>
 
 </html>

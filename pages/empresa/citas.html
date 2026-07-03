@@ -4,27 +4,25 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Citas</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<button class="menu-toggle" onclick="toggleMenu()">
+☰
+</button>
 
 <div class="overlay" onclick="cerrarMenu()"></div>
+
 <div class="sidebar" id="sidebar">
 
-</div>
-
-<h2>Glow Curl App</h2>
-
+<h2 id="nombreEmpresa">Glow Curl App</h2>
 
 <ul>
 
@@ -40,7 +38,7 @@ href="../../css/style.css">
 
 <li><a href="citas.html">📅 Citas</a></li>
 
-<li><a href="ventas.html">💰 Ventas</a></li>
+<li><a href="reportes.html">💰 Ventas</a></li>
 
 <li><a href="inventario.html">📦 Inventario</a></li>
 
@@ -52,13 +50,11 @@ href="../../css/style.css">
 
 <li><a href="configuracion.html">⚙ Configuración</a></li>
 
-<li><a href="../auth/login.html">🚪 Salir</a></li>
+<li><a href="../auth/loginEmpresa.html">🚪 Salir</a></li>
 
 </ul>
 
-
 </div>
-
 
 <div class="contenido">
 
@@ -73,9 +69,7 @@ placeholder="Cliente">
 
 <select id="servicioCita">
 
-<option value="">
-Seleccione servicio
-</option>
+<option value="">Seleccione servicio</option>
 
 <option>Corte</option>
 <option>Definición</option>
@@ -94,9 +88,7 @@ id="horaCita">
 
 <select id="estadoCita">
 
-<option value="">
-Estado
-</option>
+<option value="">Estado</option>
 
 <option>Pendiente</option>
 <option>Confirmada</option>
@@ -106,27 +98,17 @@ Estado
 
 </div>
 
-
 <div class="botones">
 
-<button onclick="guardarCita()">
-Guardar
-</button>
+<button onclick="guardarCita()">Guardar</button>
 
-<button onclick="editarCita()">
-Editar
-</button>
+<button onclick="editarCita()">Editar</button>
 
-<button onclick="eliminarCita()">
-Eliminar
-</button>
+<button onclick="eliminarCita()">Eliminar</button>
 
-<button onclick="limpiarCita()">
-Limpiar
-</button>
+<button onclick="limpiarCita()">Limpiar</button>
 
 </div>
-
 
 <div class="tabla-container">
 
@@ -157,7 +139,8 @@ Limpiar
 </div>
 
 <script src="../../js/app.js"></script>
-<script src="../../js/menu.js"></script>s
+<script src="../../js/menu.js"></script>
+
 </body>
 
 </html>

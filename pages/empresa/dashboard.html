@@ -4,24 +4,28 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Dashboard</title>
 
-<link rel="stylesheet"
-href="../../css/style.css">
+<link rel="stylesheet" href="../../css/style.css">
 
 </head>
 
 <body>
 
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<!-- BOTÓN MENÚ -->
+<button class="menu-toggle" onclick="toggleMenu()">
+☰
+</button>
 
+<!-- OVERLAY -->
 <div class="overlay" onclick="cerrarMenu()"></div>
+
+<!-- MENÚ -->
 <div class="sidebar" id="sidebar">
 
-<h2>Glow Curl App</h2>
+<h2 id="nombreEmpresa">Glow Curl App</h2>
 
 <ul>
 
@@ -37,7 +41,7 @@ href="../../css/style.css">
 
 <li><a href="citas.html">📅 Citas</a></li>
 
-<li><a href="ventas.html">💰 Ventas</a></li>
+<li><a href="reportes.html">💰 Ventas</a></li>
 
 <li><a href="inventario.html">📦 Inventario</a></li>
 
@@ -49,60 +53,47 @@ href="../../css/style.css">
 
 <li><a href="configuracion.html">⚙ Configuración</a></li>
 
-<li><a href="../auth/login.html">🚪 Salir</a></li>
+<li><a href="../auth/loginEmpresa.html">🚪 Salir</a></li>
 
 </ul>
+
 </div>
 
-
+<!-- CONTENIDO -->
 <div class="contenido">
 
 <h1>Dashboard</h1>
 
 <p>Bienvenido al panel administrativo</p>
 
-
 <div class="tarjetas">
 
 <div class="card">
-
 <h3>Clientes</h3>
-
 <p>25</p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Empleados</h3>
-
 <p>8</p>
-
 </div>
 
-
 <div class="card">
-
 <h3>Citas</h3>
-
 <p>15</p>
-
 </div>
-
 
 <div class="card">
-
 <h3>Ventas</h3>
-
 <p>$450</p>
-
 </div>
 
 </div>
 
 </div>
+
 <script src="../../js/menu.js"></script>
+
 </body>
 
 </html>
