@@ -1263,22 +1263,22 @@ alert("Carrito vaciado.");
 
 function finalizarCompra(){
 
-let usuario=getUsuario();
+let usuario = getUsuario();
 
 if(!usuario)return;
 
-let carrito=JSON.parse(localStorage.getItem("carrito"))||[];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-let compras=JSON.parse(localStorage.getItem("compras"))||[];
+let compras = JSON.parse(localStorage.getItem("compras")) || [];
 
-let mis=carrito.filter(
+// NUEVO
+let ventas = JSON.parse(localStorage.getItem("ventas")) || [];
 
-p=>p.correo===usuario.correo
-
+let mis = carrito.filter(
+p => p.correo === usuario.correo
 );
 
-
-if(mis.length===0){
+if(mis.length === 0){
 
 alert("El carrito está vacío.");
 
@@ -1286,50 +1286,69 @@ return;
 
 }
 
-
 mis.forEach(p=>{
+
+// =====================
+// GUARDAR COMPRA
+// =====================
 
 compras.push({
 
-correo:usuario.correo,
+correo: usuario.correo,
 
-producto:p.producto,
+producto: p.producto,
 
-precio:p.precio,
+precio: p.precio,
 
-cantidad:p.cantidad,
+cantidad: p.cantidad,
 
-fecha:new Date().toLocaleDateString()
+fecha: new Date().toLocaleDateString()
+
+});
+
+// =====================
+// GUARDAR TAMBIÉN COMO VENTA
+// =====================
+
+ventas.push({
+
+cliente: usuario.correo,
+
+producto: p.producto,
+
+cantidad: p.cantidad,
+
+precio: p.precio * p.cantidad,
+
+pago: "Compra Cliente",
+
+fecha: new Date().toLocaleDateString()
 
 });
 
 });
 
-
+// Guardar compras
 localStorage.setItem(
-
 "compras",
-
 JSON.stringify(compras)
-
 );
 
-
-carrito=carrito.filter(
-
-p=>p.correo!==usuario.correo
-
+// Guardar ventas
+localStorage.setItem(
+"ventas",
+JSON.stringify(ventas)
 );
 
+// Vaciar carrito
+carrito = carrito.filter(
+p => p.correo !== usuario.correo
+);
 
 localStorage.setItem(
-
 "carrito",
-
 JSON.stringify(carrito)
-
 );
-
 
 alert("Compra realizada correctamente.");
 

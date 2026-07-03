@@ -205,7 +205,21 @@ alert(
 return;
 
 }
+// GUARDAR EN LOCALSTORAGE
 
+let clientes = JSON.parse(localStorage.getItem("clientes")) || [];
+
+clientes.push({
+
+documento: documento,
+nombre: nombre,
+apellido: apellido,
+telefono: telefono,
+cabello: cabello
+
+});
+
+localStorage.setItem("clientes", JSON.stringify(clientes));
 
 /* EDITAR */
 
@@ -383,101 +397,65 @@ campo.value.replace(
 }
 /* EMPLEADOS */
 
-let filaEmpleado=null;
-
-function guardarEmpleado(){
-
-let documento=document.getElementById(
-"documentoEmpleado").value;
-
-let nombre=document.getElementById(
-"nombreEmpleado").value;
-
-let apellido=document.getElementById(
-"apellidoEmpleado").value;
-
-let telefono=document.getElementById(
-"telefonoEmpleado").value;
-
-let cargo=document.getElementById(
-"cargoEmpleado").value;
+let filaEmpleado = null;
 
 
-if(
-documento===""||
-nombre===""||
-apellido===""||
-telefono===""||
-cargo===""
-){
+function guardarEmpleado() {
 
-alert("Complete todos los campos");
-return;
+    let documento = document.getElementById("documentoEmpleado").value;
+    let nombre = document.getElementById("nombreEmpleado").value;
+    let apellido = document.getElementById("apellidoEmpleado").value;
+    let telefono = document.getElementById("telefonoEmpleado").value;
+    let cargo = document.getElementById("cargoEmpleado").value;
 
-}
+    if (
+        documento === "" ||
+        nombre === "" ||
+        apellido === "" ||
+        telefono === "" ||
+        cargo === ""
+    ) {
+        alert("Complete todos los campos");
+        return;
+    }
 
+    let empleados = JSON.parse(localStorage.getItem("empleados")) || [];
 
-if(filaEmpleado){
+    empleados.push({
+        documento,
+        nombre,
+        apellido,
+        telefono,
+        cargo
+    });
 
-filaEmpleado.cells[0].innerHTML=documento;
-filaEmpleado.cells[1].innerHTML=nombre;
-filaEmpleado.cells[2].innerHTML=apellido;
-filaEmpleado.cells[3].innerHTML=telefono;
-filaEmpleado.cells[4].innerHTML=cargo;
+    localStorage.setItem("empleados", JSON.stringify(empleados));
 
-filaEmpleado=null;
+    let tabla = document.getElementById("tablaEmpleados").getElementsByTagName("tbody")[0];
 
-limpiarEmpleado();
+    let fila = tabla.insertRow();
 
-return;
+    fila.insertCell(0).innerHTML = documento;
+    fila.insertCell(1).innerHTML = nombre;
+    fila.insertCell(2).innerHTML = apellido;
+    fila.insertCell(3).innerHTML = telefono;
+    fila.insertCell(4).innerHTML = cargo;
 
-}
+    fila.onclick = function () {
 
+        filaEmpleado = fila;
 
-let tabla=document.getElementById(
-"tablaEmpleados")
-.getElementsByTagName(
-"tbody")[0];
+        document.getElementById("documentoEmpleado").value = fila.cells[0].innerHTML;
+        document.getElementById("nombreEmpleado").value = fila.cells[1].innerHTML;
+        document.getElementById("apellidoEmpleado").value = fila.cells[2].innerHTML;
+        document.getElementById("telefonoEmpleado").value = fila.cells[3].innerHTML;
+        document.getElementById("cargoEmpleado").value = fila.cells[4].innerHTML;
 
-let fila=tabla.insertRow();
+    };
 
-fila.insertCell(0).innerHTML=documento;
-fila.insertCell(1).innerHTML=nombre;
-fila.insertCell(2).innerHTML=apellido;
-fila.insertCell(3).innerHTML=telefono;
-fila.insertCell(4).innerHTML=cargo;
-
-
-fila.onclick=function(){
-
-filaEmpleado=fila;
-
-document.getElementById(
-"documentoEmpleado").value=
-fila.cells[0].innerHTML;
-
-document.getElementById(
-"nombreEmpleado").value=
-fila.cells[1].innerHTML;
-
-document.getElementById(
-"apellidoEmpleado").value=
-fila.cells[2].innerHTML;
-
-document.getElementById(
-"telefonoEmpleado").value=
-fila.cells[3].innerHTML;
-
-document.getElementById(
-"cargoEmpleado").value=
-fila.cells[4].innerHTML;
+    limpiarEmpleado();
 
 }
-
-limpiarEmpleado();
-
-}
-
 
 
 function editarEmpleado(){
@@ -489,11 +467,10 @@ return;
 
 }
 
-alert(
-"Modifique los datos y guarde"
-);
+alert("Modifique los datos y guarde");
 
 }
+
 
 
 function eliminarEmpleado(){
@@ -1058,111 +1035,81 @@ document.getElementById(
 }
 /* VENTAS */
 
-let filaVenta=null;
+let filaVenta = null;
 
 function guardarVenta(){
 
-let cliente=
-document.getElementById(
-"clienteVenta").value;
+    let cliente = document.getElementById("clienteVenta").value;
+    let producto = document.getElementById("productoVenta").value;
+    let cantidad = document.getElementById("cantidadVenta").value;
+    let precio = document.getElementById("precioVenta").value;
+    let pago = document.getElementById("metodoPago").value;
 
-let producto=
-document.getElementById(
-"productoVenta").value;
+    if(cliente==="" || producto==="" || cantidad==="" || precio==="" || pago===""){
 
-let cantidad=
-document.getElementById(
-"cantidadVenta").value;
+        alert("Complete todos los campos");
+        return;
 
-let precio=
-document.getElementById(
-"precioVenta").value;
+    }
 
-let pago=
-document.getElementById(
-"metodoPago").value;
+    // SI ES EDICIÓN
+    if(filaVenta){
 
+        filaVenta.cells[0].innerHTML = cliente;
+        filaVenta.cells[1].innerHTML = producto;
+        filaVenta.cells[2].innerHTML = cantidad;
+        filaVenta.cells[3].innerHTML = precio;
+        filaVenta.cells[4].innerHTML = pago;
 
-if(
-cliente===""||
-producto===""||
-cantidad===""||
-precio===""||
-pago===""){
+        filaVenta = null;
 
-alert(
-"Complete todos los campos"
-);
+        limpiarVenta();
 
-return;
+        return;
 
-}
+    }
 
+    // GUARDAR EN LOCALSTORAGE
+    let ventas = JSON.parse(localStorage.getItem("ventas")) || [];
 
-if(filaVenta){
+    ventas.push({
 
-filaVenta.cells[0].innerHTML=cliente;
-filaVenta.cells[1].innerHTML=producto;
-filaVenta.cells[2].innerHTML=cantidad;
-filaVenta.cells[3].innerHTML=precio;
-filaVenta.cells[4].innerHTML=pago;
+        cliente: cliente,
+        producto: producto,
+        cantidad: cantidad,
+        precio: Number(precio),
+        pago: pago
 
-filaVenta=null;
+    });
 
-limpiarVenta();
+    localStorage.setItem("ventas", JSON.stringify(ventas));
 
-return;
+    // AGREGAR A LA TABLA
+    let tabla = document.getElementById("tablaVentas").getElementsByTagName("tbody")[0];
 
-}
+    let fila = tabla.insertRow();
 
+    fila.insertCell(0).innerHTML = cliente;
+    fila.insertCell(1).innerHTML = producto;
+    fila.insertCell(2).innerHTML = cantidad;
+    fila.insertCell(3).innerHTML = precio;
+    fila.insertCell(4).innerHTML = pago;
 
-let tabla=
-document.getElementById(
-"tablaVentas")
-.getElementsByTagName(
-"tbody")[0];
+    fila.onclick = function(){
 
-let fila=
-tabla.insertRow();
+        filaVenta = fila;
 
-fila.insertCell(0).innerHTML=cliente;
-fila.insertCell(1).innerHTML=producto;
-fila.insertCell(2).innerHTML=cantidad;
-fila.insertCell(3).innerHTML=precio;
-fila.insertCell(4).innerHTML=pago;
+        document.getElementById("clienteVenta").value = fila.cells[0].innerHTML;
+        document.getElementById("productoVenta").value = fila.cells[1].innerHTML;
+        document.getElementById("cantidadVenta").value = fila.cells[2].innerHTML;
+        document.getElementById("precioVenta").value = fila.cells[3].innerHTML;
+        document.getElementById("metodoPago").value = fila.cells[4].innerHTML;
 
+    };
 
-fila.onclick=function(){
-
-filaVenta=fila;
-
-document.getElementById(
-"clienteVenta").value=
-fila.cells[0].innerHTML;
-
-document.getElementById(
-"productoVenta").value=
-fila.cells[1].innerHTML;
-
-document.getElementById(
-"cantidadVenta").value=
-fila.cells[2].innerHTML;
-
-document.getElementById(
-"precioVenta").value=
-fila.cells[3].innerHTML;
-
-document.getElementById(
-"metodoPago").value=
-fila.cells[4].innerHTML;
+    limpiarVenta();
 
 }
-
-limpiarVenta();
-
-}
-
-
 
 function editarVenta(){
 

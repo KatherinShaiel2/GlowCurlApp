@@ -30,29 +30,17 @@
 <ul>
 
 <li><a href="dashboard.html">🏠 Inicio</a></li>
-
 <li><a href="clientes.html">👥 Clientes</a></li>
-
 <li><a href="empleados.html">👨‍💼 Empleados</a></li>
-
 <li><a href="productos.html">🧴 Productos</a></li>
-
 <li><a href="servicios.html">💇 Servicios</a></li>
-
 <li><a href="citas.html">📅 Citas</a></li>
-
-<li><a href="reportes.html">💰 Ventas</a></li>
-
+<li><a href="ventas.html">💰 Ventas</a></li>
 <li><a href="inventario.html">📦 Inventario</a></li>
-
 <li><a href="proveedores.html">🚚 Proveedores</a></li>
-
 <li><a href="usuarios.html">👤 Usuarios</a></li>
-
 <li><a href="reportes.html">📊 Reportes</a></li>
-
 <li><a href="configuracion.html">⚙ Configuración</a></li>
-
 <li><a href="../auth/loginEmpresa.html">🚪 Salir</a></li>
 
 </ul>
@@ -60,6 +48,7 @@
 </div>
 
 <!-- CONTENIDO -->
+
 <div class="contenido">
 
 <h1>Dashboard</h1>
@@ -69,30 +58,79 @@
 <div class="tarjetas">
 
 <div class="card">
-<h3>Clientes</h3>
-<p>25</p>
+<h3>👥 Clientes</h3>
+<p id="totalClientes">0</p>
 </div>
 
 <div class="card">
-<h3>Empleados</h3>
-<p>8</p>
+<h3>👨‍💼 Empleados</h3>
+<p id="totalEmpleados">0</p>
 </div>
 
 <div class="card">
-<h3>Citas</h3>
-<p>15</p>
+<h3>📅 Citas</h3>
+<p id="totalCitas">0</p>
 </div>
 
 <div class="card">
-<h3>Ventas</h3>
-<p>$450</p>
+<h3>💰 Ventas</h3>
+<p id="totalVentas">$0</p>
 </div>
 
 </div>
 
 </div>
 
+<script src="../../js/app.js"></script>
 <script src="../../js/menu.js"></script>
+
+<script>
+
+window.onload=function(){
+
+// Nombre empresa
+let empresa=localStorage.getItem("empresaNombre");
+
+if(empresa!=null){
+
+document.getElementById("nombreEmpresa").innerHTML=empresa;
+
+}
+
+// Clientes
+let clientes=JSON.parse(localStorage.getItem("clientes"))||[];
+
+document.getElementById("totalClientes").innerHTML=clientes.length;
+
+
+// Empleados
+let empleados=JSON.parse(localStorage.getItem("empleados"))||[];
+
+document.getElementById("totalEmpleados").innerHTML=empleados.length;
+
+
+// Citas
+let citas=JSON.parse(localStorage.getItem("citas"))||[];
+
+document.getElementById("totalCitas").innerHTML=citas.length;
+
+
+// Ventas
+let ventas=JSON.parse(localStorage.getItem("ventas"))||[];
+
+let total=0;
+
+ventas.forEach(function(v){
+
+total+=Number(v.precio||0);
+
+});
+
+document.getElementById("totalVentas").innerHTML="$"+total.toLocaleString("es-CO");
+
+}
+
+</script>
 
 </body>
 

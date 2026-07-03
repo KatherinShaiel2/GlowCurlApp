@@ -671,3 +671,42 @@ background:#a9744f;
 transform:scale(1.05);
 
 }
+/* BOTÓN VOLVER AL INICIO */
+
+.btn-inicio{
+
+position: absolute;
+top: 20px;
+right: 20px;
+
+padding: 10px 20px;
+
+background: #F8F4EC;
+color: #7B4A91;
+
+text-decoration: none;
+font-weight: bold;
+font-size: 15px;
+
+border: 2px solid #D8C3E5;
+border-radius: 30px;
+
+box-shadow: 0 4px 10px rgba(0,0,0,.15);
+
+transition: .3s ease;
+
+z-index: 999;
+
+}
+
+.btn-inicio:hover{
+
+background: #EBDCF5;
+
+color: #5B2C6F;
+
+transform: translateY(-2px);
+
+box-shadow: 0 6px 15px rgba(0,0,0,.2);
+
+}
