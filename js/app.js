@@ -74,39 +74,33 @@ pass.type="password";
 
 function ingresarEmpresa(){
 
-let usuario=
-document.getElementById(
-"usuarioEmpresa"
-).value;
+let usuario = document.getElementById("usuarioEmpresa").value;
+let password = document.getElementById("passwordEmpresa").value;
 
-let password=
-document.getElementById(
-"passwordEmpresa"
-).value;
+// Usuario y contraseña del administrador
+const usuarioEmpresa = "admin";
+const passwordEmpresa = "glow123";
 
-if(
-usuario===""||
-password===""
-){
+if(usuario === "" || password === ""){
 
-alert(
-"Complete todos los campos"
-);
-
-return;
+    alert("Complete todos los campos");
+    return;
 
 }
 
-localStorage.setItem(
-"empresaActual",
-usuario
-);
+if(usuario === usuarioEmpresa && password === passwordEmpresa){
 
-window.location.href=
-"../empresa/dashboard.html";
+    localStorage.setItem("empresaActual","Glow Curl");
+
+    window.location.href="../empresa/dashboard.html";
+
+}else{
+
+    alert("Usuario o contraseña incorrectos.");
 
 }
 
+}
 
 function limpiarEmpresa(){
 

@@ -3,8 +3,11 @@
 // ===============================
 function toggleMenu() {
 
-    document.getElementById("sidebar").classList.toggle("activo");
-    document.querySelector(".overlay").classList.toggle("activo");
+    let sidebar = document.getElementById("sidebar");
+    let overlay = document.querySelector(".overlay");
+
+    if(sidebar) sidebar.classList.toggle("activo");
+    if(overlay) overlay.classList.toggle("activo");
 
 }
 
@@ -13,51 +16,56 @@ function toggleMenu() {
 // ===============================
 function cerrarMenu() {
 
-    document.getElementById("sidebar").classList.remove("activo");
-    document.querySelector(".overlay").classList.remove("activo");
+    let sidebar = document.getElementById("sidebar");
+    let overlay = document.querySelector(".overlay");
+
+    if(sidebar) sidebar.classList.remove("activo");
+    if(overlay) overlay.classList.remove("activo");
 
 }
 
 // ===============================
 // CARGAR CONFIGURACIÓN
 // ===============================
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
 
     let config = JSON.parse(localStorage.getItem("configuracion"));
 
-    if (!config) return;
+    if(!config) return;
 
-    // Cambiar nombre de la empresa
+    // Nombre empresa
     let titulo = document.getElementById("nombreEmpresa");
 
-    if (titulo) {
+    if(titulo){
 
-        titulo.innerText = config.empresa || "Glow Curl App";
-
-    }
-
-    // Aplicar tema
-    if (config.tema === "rosa") {
-
-        document.documentElement.style.setProperty("--sidebar", "#d46aa3");
-        document.documentElement.style.setProperty("--boton", "#d46aa3");
-        document.documentElement.style.setProperty("--fondo", "#fdeaf3");
+        titulo.innerHTML = config.empresa || "Glow Curl App";
 
     }
 
-    else if (config.tema === "beige") {
+    // Tema
+    switch(config.tema){
 
-        document.documentElement.style.setProperty("--sidebar", "#b68b63");
-        document.documentElement.style.setProperty("--boton", "#b68b63");
-        document.documentElement.style.setProperty("--fondo", "#f5eee6");
+        case "rosa":
 
-    }
+            document.documentElement.style.setProperty("--sidebar","#d46aa3");
+            document.documentElement.style.setProperty("--boton","#d46aa3");
+            document.documentElement.style.setProperty("--fondo","#fdeaf3");
 
-    else {
+        break;
 
-        document.documentElement.style.setProperty("--sidebar", "#d89c7d");
-        document.documentElement.style.setProperty("--boton", "#d89c7d");
-        document.documentElement.style.setProperty("--fondo", "#f4e4da");
+        case "beige":
+
+            document.documentElement.style.setProperty("--sidebar","#b68b63");
+            document.documentElement.style.setProperty("--boton","#b68b63");
+            document.documentElement.style.setProperty("--fondo","#f5eee6");
+
+        break;
+
+        default:
+
+            document.documentElement.style.setProperty("--sidebar","#d89c7d");
+            document.documentElement.style.setProperty("--boton","#d89c7d");
+            document.documentElement.style.setProperty("--fondo","#f4e4da");
 
     }
 
